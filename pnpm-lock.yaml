@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
     devDependencies:
       bumpp:
         specifier: ^10.3.1
@@ -17,9 +21,6 @@ importers:
       lint-staged:
         specifier: ^16.2.4
         version: 16.2.4
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
       prettier-plugin-tailwindcss:
         specifier: ^0.7.1
         version: 0.7.1(prettier@3.6.2)
