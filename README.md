@@ -7,18 +7,19 @@
 [![Contributors](https://img.shields.io/github/contributors/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/graphs/contributors)
 [![License](https://img.shields.io/github/license/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/blob/main/LICENSE)
 
-A shared Prettier config with plugins for our projects.
+A shared, ESM-first Prettier config for our projects - small API, zero friction, and sensible defaults.
 
 ## Why use this
 
-- Unified Prettier style for all our projects.
-- Easy-to-use API: `prettier(printWidth)`.
-- Fully ESM and compatible with Prettier 3+.
-- Works seamlessly with `lint-staged`, `husky`, and CI setups.
+- **Unified style** across our repositories.
+- **Zero-config**: `export default prettier()` works out of the box.
+- **ESM-first**: works naturally with modern JS/TS projects.
+- **Customizable**: pass options or extend the factory for project needs.
+- **Prettier 3+ compatible** and plays nicely with `lint-staged`, `husky`, CI pipelines.
 
-## Quick start
+## Installation
 
-Install `@maneko/prettier` and the minimal tooling in your project. Use the command matching your package manager.
+Install the package (choose your package manager):
 
 ```bash
 # pnpm (recommended)
@@ -31,26 +32,56 @@ yarn add -D prettier @maneko/prettier
 npm install -D prettier @maneko/prettier
 ```
 
-If you using TailwindCSS, install the optional plugin:
+For TailwindCSS users, install this optional plugin:
 
 ```bash
 pnpm add -D prettier-plugin-tailwindcss
 ```
 
-## Basic usage
+## Quick start
+
+Create a Prettier config file in your project.
+
+ESM project (`.prettierrc.mjs`):
 
 ```js
 import { prettier } from '@maneko/prettier';
 
-export default prettier(100);
+export default prettier();
 ```
 
-## Scripts & common commands
+CJS project (`.prettierrc.cjs` / `.prettierrc.js`):
 
-Add convenient scripts to `package.json`:
+```js
+const { prettier } = require('@maneko/prettier');
+
+module.exports = prettier();
+```
+
+## Customize / override defaults
+
+Pass options to override Prettier's defaults:
+
+```js
+import { prettier } from '@maneko/prettier';
+
+export default prettier({
+  printWidth: 100,
+  singleQuote: true,
+  trailingComma: 'none'
+  // any other Prettier options
+});
+```
+
+The function simply merges your options with the shared defaults — minimal API, familiar behavior.
+
+## Scripts & lint-staged
+
+Add scripts to `package.json`:
 
 ```json
 {
+  "prettier": "@maneko/prettier",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check ."
@@ -58,45 +89,30 @@ Add convenient scripts to `package.json`:
 }
 ```
 
-If you use `lint-staged` + `husky` your setup might look like this:
+Example `lint-staged` + `husky`:
 
 ```json
 {
   "lint-staged": {
-    "**/*.{js,ts,jsx,tsx,mjs}": ["pnpm format"]
+    "**/*.{js,ts,jsx,tsx,mjs,cjs,json,md}": ["pnpm format"]
   }
 }
 ```
 
-## API Reference
+## IDE (VS Code) integration
 
-| Option        | Type      | Default | Description                                        |
-| ------------- | --------- | ------- | -------------------------------------------------- |
-| `printWidth`  | `number`  | `80`    | Line length before wrapping                        |
-| `tailwindcss` | `boolean` | `false` | Enables `prettier-plugin-tailwindcss` if installed |
-
-## IDE integration (VS Code)
-
-To ensure a smooth experience, install the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+Install the Prettier VS Code extension: `esbenp.prettier-vscode`.
 
 Recommended `.vscode/settings.json`:
 
 ```jsonc
 {
-  // Enable Prettier as the default formatter
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-  // Automatically format files on save
   "editor.formatOnSave": true,
-
-  // Optionally disable ESLint formatting if using @maneko/eslint separately
-  "eslint.format.enable": false,
-
-  // Make sure Prettier uses project-local version (not global)
   "prettier.resolveGlobalModules": false,
-
-  // Optionally auto-detect prettier config in monorepos
   "prettier.requireConfig": true
+  // If you use an ESLint config for formatting, you may want:
+  // "eslint.format.enable": false
 }
 ```
 
