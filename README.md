@@ -81,7 +81,6 @@ Add scripts to `package.json`:
 
 ```json
 {
-  "prettier": "@maneko/prettier",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check ."
