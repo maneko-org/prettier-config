@@ -1,11 +1,7 @@
-/**
- * @param {number} printWidth
- * @param {boolean} tailwindcss
- * @returns {import('prettier').Config}
- */
-export const prettier = (printWidth = 80, tailwindcss = false) => {
-  const baseOptions = {
-    printWidth,
+/** @type {import('@maneko/prettier').Prettier} */
+export const prettier = (userConfigs = {}) => {
+  return {
+    printWidth: 80,
     tabWidth: 2,
     useTabs: false,
     semi: true,
@@ -16,13 +12,9 @@ export const prettier = (printWidth = 80, tailwindcss = false) => {
     bracketSameLine: false,
     arrowParens: 'always',
     endOfLine: 'lf',
-    quoteProps: 'consistent'
-  };
-
-  if (!tailwindcss) return baseOptions;
-
-  return {
-    ...baseOptions,
-    plugins: ['prettier-plugin-tailwindcss']
+    quoteProps: 'consistent',
+    ...userConfigs
   };
 };
+
+export default prettier();
