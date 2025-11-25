@@ -1,4 +1,4 @@
-/** @type {import('@maneko/prettier').Prettier} */
+/** @type {import('@maneko/prettier-config').Prettier} */
 export const prettier = (userConfigs = {}) => {
   return {
     printWidth: 80,

@@ -1,4 +1,4 @@
-# @maneko/prettier
+# @maneko/prettier-config
 
 [![Stars](https://img.shields.io/github/stars/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/stargazers)
 [![Forks](https://img.shields.io/github/forks/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/network/members)
@@ -23,13 +23,13 @@ Install the package (choose your package manager):
 
 ```bash
 # pnpm (recommended)
-pnpm add -D prettier @maneko/prettier
+pnpm add -D prettier @maneko/prettier-config
 
 # yarn
-yarn add -D prettier @maneko/prettier
+yarn add -D prettier @maneko/prettier-config
 
 # npm
-npm install -D prettier @maneko/prettier
+npm install -D prettier @maneko/prettier-config
 ```
 
 For TailwindCSS users, install this optional plugin:
@@ -45,7 +45,7 @@ Create a Prettier config file in your project.
 ESM project (`.prettierrc.mjs`):
 
 ```js
-import { prettier } from '@maneko/prettier';
+import { prettier } from '@maneko/prettier-config';
 
 export default prettier();
 ```
@@ -53,7 +53,7 @@ export default prettier();
 CJS project (`.prettierrc.cjs` / `.prettierrc.js`):
 
 ```js
-const { prettier } = require('@maneko/prettier');
+const { prettier } = require('@maneko/prettier-config');
 
 module.exports = prettier();
 ```
@@ -63,7 +63,7 @@ module.exports = prettier();
 Pass options to override Prettier's defaults:
 
 ```js
-import { prettier } from '@maneko/prettier';
+import { prettier } from '@maneko/prettier-config';
 
 export default prettier({
   printWidth: 100,
@@ -115,7 +115,7 @@ Recommended `.vscode/settings.json`:
 }
 ```
 
-> If you use both `@maneko/eslint` and `@maneko/prettier`, let Prettier handle pure formatting (quotes, spacing, commas) and ESLint handle logic and style rules.
+> If you use both `@maneko/eslint` and `@maneko/prettier-config`, let Prettier handle pure formatting (quotes, spacing, commas) and ESLint handle logic and style rules.
 
 ## Contributing
 
@@ -123,4 +123,4 @@ PRs welcome. Keep changes small and document any new opinionated rules.
 
 ## License
 
-`@maneko/prettier` is licensed under the MIT License. See the `LICENSE` file in the repository.
+`@maneko/prettier-config` is licensed under the MIT License. See the `LICENSE` file in the repository.

@@ -1,4 +1,4 @@
-declare module '@maneko/prettier' {
+declare module '@maneko/prettier-config' {
   import type { Config as PrettierConfig } from 'prettier';
 
   export type Prettier = (
