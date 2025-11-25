@@ -1,9 +1,9 @@
 {
   "name": "@maneko/prettier",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "packageManager": "pnpm@10.18.3",
-  "description": "Shared Prettier config for our projects",
+  "description": "A shared, ESM-first Prettier config for our projects",
   "license": "MIT",
   "homepage": "https://github.com/maneko-org/prettier",
   "repository": {
