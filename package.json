@@ -1,7 +1,7 @@
 {
   "name": "@maneko/prettier-config",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packageManager": "pnpm@10.18.3",
   "description": "A shared, ESM-first Prettier config for our projects",
   "license": "MIT",
