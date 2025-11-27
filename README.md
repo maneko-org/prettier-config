@@ -1,11 +1,11 @@
 # @maneko/prettier-config
 
-[![Stars](https://img.shields.io/github/stars/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/stargazers)
-[![Forks](https://img.shields.io/github/forks/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/network/members)
-[![Pull Requests](https://img.shields.io/github/issues-pr/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/pulls)
-[![Issues](https://img.shields.io/github/issues/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/issues)
-[![Contributors](https://img.shields.io/github/contributors/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/graphs/contributors)
-[![License](https://img.shields.io/github/license/maneko-org/prettier?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/maneko-org/prettier-config?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier-config/stargazers)
+[![Forks](https://img.shields.io/github/forks/maneko-org/prettier-config?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier-config/network/members)
+[![Pull Requests](https://img.shields.io/github/issues-pr/maneko-org/prettier-config?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier-config/pulls)
+[![Issues](https://img.shields.io/github/issues/maneko-org/prettier-config?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier-config/issues)
+[![Contributors](https://img.shields.io/github/contributors/maneko-org/prettier-config?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier-config/graphs/contributors)
+[![License](https://img.shields.io/github/license/maneko-org/prettier-config?style=flat-square&logoColor=white)](https://github.com/maneko-org/prettier-config/blob/main/LICENSE)
 
 A shared, ESM-first Prettier config for our projects - small API, zero friction, and sensible defaults.
 

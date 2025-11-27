@@ -5,12 +5,12 @@
   "packageManager": "pnpm@10.18.3",
   "description": "A shared, ESM-first Prettier config for our projects",
   "license": "MIT",
-  "homepage": "https://github.com/maneko-org/prettier",
+  "homepage": "https://github.com/maneko-org/prettier-config",
   "repository": {
-    "url": "https://github.com/maneko-org/prettier"
+    "url": "https://github.com/maneko-org/prettier-config"
   },
   "bugs": {
-    "url": "https://github.com/maneko-org/prettier/issues"
+    "url": "https://github.com/maneko-org/prettier-config/issues"
   },
   "exports": {
     ".": {
